@@ -1,28 +1,24 @@
 import React from "react";
+import TopBar from "./components/TopBar";
+import Hero from "./components/Hero";
+import MainContent from "./components/MainContent";
+import BottomBar from "./components/BottomBar";
 
 export default function Main() {
   return (
     <main className="w-full h-screen bg-gray-200 flex flex-col justify-between items-center">
       <div className="w-full sm:max-w-sm h-full flex flex-col">
-        {/* Top Bar - Sticky */}
-        <div className="bg-red-500 h-16 flex items-center justify-center sticky top-0 z-10">
-          <span className="text-white">TOP BAR</span>
-        </div>
+        {/* Top Bar */}
+        <TopBar />
 
         {/* Hero Section */}
-        <div className="bg-green-500 h-24 flex items-center justify-center">
-          <span className="text-white">HERO</span>
-        </div>
+        <Hero />
 
         {/* Main Content */}
-        <div className="bg-blue-500 flex-grow flex items-center justify-center">
-          <span className="text-white">MAIN</span>
-        </div>
+        <MainContent />
 
-        {/* Bottom Bar - Sticky */}
-        <div className="bg-red-500 h-16 flex items-center justify-center sticky bottom-0 z-10">
-          <span className="text-white">BOTTOM BAR</span>
-        </div>
+        {/* Bottom Bar */}
+        <BottomBar />
       </div>
     </main>
   );
