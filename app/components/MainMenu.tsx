@@ -1,5 +1,5 @@
 import React from "react";
-import { main } from "../data/mainData"; // Importing the data
+import { main } from "../data/mainData";
 
 export default function MainMenu() {
   return (
