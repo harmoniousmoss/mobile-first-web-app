@@ -11,14 +11,14 @@ export default function Hero() {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % heroData.length);
-    }, 5000);
+    }, 3000);
     return () => clearInterval(interval); // Clean up on unmount
   }, []);
 
   return (
     <div className="p-4 w-full max-w-sm mx-auto bg-white shadow-md">
       {" "}
-      {/* Removed rounded-lg */}
+      {/* Container without rounded corners */}
       <div className="relative w-full max-w-sm overflow-hidden">
         <div
           className="flex transition-transform duration-500 ease-in-out"
@@ -32,7 +32,7 @@ export default function Hero() {
                 alt={slide.title}
                 className="object-cover rounded-lg w-full h-44"
                 width={300}
-                height={200}
+                height={176}
               />
 
               {/* Dark overlay */}
@@ -47,6 +47,19 @@ export default function Hero() {
                 <p className="text-white mt-1 max-w-[275px]">{slide.desc}</p>
               </div>
             </div>
+          ))}
+        </div>
+
+        {/* Dots for the slider */}
+        <div className="flex justify-center mt-4">
+          {heroData.map((_, index) => (
+            <div
+              key={index}
+              className={`w-3 h-3 rounded-full mx-1 cursor-pointer ${
+                currentIndex === index ? "bg-gray-800" : "bg-gray-300"
+              }`}
+              onClick={() => setCurrentIndex(index)}
+            ></div>
           ))}
         </div>
       </div>
