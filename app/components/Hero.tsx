@@ -16,10 +16,9 @@ export default function Hero() {
   }, []);
 
   return (
-    <div className="p-4 w-full max-w-sm mx-auto bg-white shadow-md">
-      {" "}
-      {/* Container without rounded corners */}
-      <div className="relative w-full max-w-sm overflow-hidden">
+    <div className="w-full max-w-3xl p-4 bg-white shadow-md mx-auto">
+      {/* Container with fixed width for larger screens, padding on sides */}
+      <div className="relative w-full overflow-hidden">
         <div
           className="flex transition-transform duration-500 ease-in-out"
           style={{ transform: `translateX(-${currentIndex * 100}%)` }}
