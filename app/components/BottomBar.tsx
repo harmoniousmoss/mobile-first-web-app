@@ -1,5 +1,5 @@
 import React from "react";
-import { bottomBarItems } from "../data/bottomBarData"; // Importing the menu data
+import { bottomBarItems } from "../data/bottomBarData";
 
 export default function BottomBar() {
   return (
