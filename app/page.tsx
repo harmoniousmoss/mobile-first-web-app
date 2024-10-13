@@ -2,10 +2,10 @@ import React from "react";
 
 export default function Main() {
   return (
-    <main className="w-full h-screen bg-gray-200 flex justify-center items-center">
+    <main className="w-full h-screen bg-gray-200 flex flex-col justify-between items-center">
       <div className="w-full sm:max-w-sm h-full flex flex-col">
-        {/* Top Bar */}
-        <div className="bg-red-500 h-16 flex items-center justify-center">
+        {/* Top Bar - Sticky */}
+        <div className="bg-red-500 h-16 flex items-center justify-center sticky top-0 z-10">
           <span className="text-white">TOP BAR</span>
         </div>
 
@@ -19,8 +19,8 @@ export default function Main() {
           <span className="text-white">MAIN</span>
         </div>
 
-        {/* Bottom Bar */}
-        <div className="bg-red-500 h-16 flex items-center justify-center">
+        {/* Bottom Bar - Sticky */}
+        <div className="bg-red-500 h-16 flex items-center justify-center sticky bottom-0 z-10">
           <span className="text-white">BOTTOM BAR</span>
         </div>
       </div>
