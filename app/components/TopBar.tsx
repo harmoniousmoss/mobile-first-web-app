@@ -3,7 +3,7 @@ import { FiSearch, FiUser } from "react-icons/fi";
 
 export default function TopBar() {
   return (
-    <div className="bg-red-500 h-16 flex items-center justify-between sticky top-0 z-10 px-4">
+    <div className="bg-gray-100 h-16 flex items-center justify-between sticky top-0 z-10 px-4">
       {/* Search Field */}
       <div className="flex items-center bg-white rounded-full px-3 py-2 flex-grow max-w-xs">
         <FiSearch className="text-gray-400 mr-2" />
